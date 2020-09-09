@@ -1,0 +1,52 @@
+/*
+ Theme Name:   Astra Child Theme
+ Theme URI:    http://example.com/astra-child-theme/
+ Description:  Astra Child Theme
+ Author:       Rasmus Christensen
+ Author URI:   http://localhost/3-semester/wordpress-localhost/
+ Template:     astra
+ Version:      1.2.2
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  astrachildtheme
+*/
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.header-background{
+    background-color: white;
+    /*box-shadow: 0px 5px 7px 0px rgba(234,234,234,1);*/
+}
+
+.header-background-box-shadow{
+    box-shadow: 0px 5px 7px 0px rgba(234,234,234,1);
+}
+
+.header-menu-punkter{
+    color: black !important;
+}
+
+.logo-img-rc{
+   display: none !important;
+}
+
+#rc-logo-sort{
+    height: 65px;
+    width: 65px;
+    display: none;
+}
+
+.rc-logo-vis-sort{
+    display: block !important;
+}
+
+
+
+
+
+
