@@ -31,6 +31,6 @@
 </div> <!-- Main Header Bar Wrap -->
 
 
-<body onscroll="myFunction()">
+
 
 

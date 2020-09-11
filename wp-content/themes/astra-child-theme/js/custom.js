@@ -1,15 +1,14 @@
 
 let navbar = document.querySelector(".main-header-bar-wrap");
-let firstsection = document.querySelector(".elementor-column-wrap elementor-element-populated");
 let logosort = document.getElementById("rc-logo-sort");
 //let navpunkt = document.querySelector(".menu-link");//
 let sticky = navbar.offsetTop;
-let navbarbottom = sticky+60;
 let logoimg = document.querySelector(".custom-logo");
 let menulinks = document.getElementsByClassName('menu-link');
+let firstsection = document.getElementById("first-section");
 
 
-function myFunction() {
+window.onscroll = function() {
   if (window.pageYOffset > 0 ) {
   navbar.classList.add("sticky");
   navbar.classList.add("header-background");
@@ -19,7 +18,8 @@ function myFunction() {
   navbar.style.transition= "0.5s";
   logoimg.style.transition= "0.5s";
   logosort.style.transition= "0.5s";
-      console.log(navbarbottom);
+
+
       
 
 
@@ -42,6 +42,15 @@ Array.from(menulinks).forEach(function(item){
   logoimg.style.transition= "0.5s";
   logosort.style.transition= "0.5s";
   }
+    
+    let firstsectionTop = firstsection.getBoundingClientRect("first-section").top
+    let navbarBottom = navbar.getBoundingClientRect("first-section").bottom
+    
+    if(firstsectionTop<=navbarBottom){
+        navbar.classList.add("header-background-box-shadow")
+    } else if(firstsectionTop=>navbarBottom){
+        navbar.classList.remove("header-background-box-shadow")
+    }
 }
 
 
