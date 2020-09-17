@@ -5,11 +5,11 @@ let logosort = document.getElementById("rc-logo-sort");
 let sticky = navbar.offsetTop;
 let logoimg = document.querySelector(".custom-logo");
 let menulinks = document.getElementsByClassName('menu-link');
-let firstsection = document.getElementById("first-section");
+let firstsection = document.querySelector(".first-section");
 
 
 
-let options = {
+/*let options = {
     root: null,
     rootMargin: '0px',
     threshold:1.0
@@ -31,10 +31,10 @@ let callback = (entries, observer)=>{
                 }
             }
     });
-}
+} 
 
 let observer = new IntersectionObserver(callback, options);
-observer.observe(document.querySelector('#velkommen-video'));
+observer.observe(document.querySelector('#velkommen-video')); */
 
 window.onscroll = function() {
   if (window.pageYOffset > 0 ) {
@@ -73,8 +73,8 @@ Array.from(menulinks).forEach(function(item){
     
 
     
-    let firstsectionTop = firstsection.getBoundingClientRect("first-section").top
-    let navbarBottom = navbar.getBoundingClientRect("first-section").bottom
+    let firstsectionTop = firstsection.getBoundingClientRect(".first-section").top
+    let navbarBottom = navbar.getBoundingClientRect(".first-section").bottom
     
     
     if(firstsectionTop<=navbarBottom){
@@ -90,7 +90,30 @@ Array.from(menulinks).forEach(function(item){
 
 
 
+let options = {
+    root: null,
+    rootMargin: '0px',
+    threshold:1.0
+};
 
+let vid = document.getElementById("velkommen-video");
+
+let callback = (entries, observer)=>{
+    entries.forEach(entry => {
+        if(entry.target.id == 'velkommen-video')
+            {
+                if(entry.isIntersecting){
+                    entry.target.play();
+                }
+                else{
+                    entry.target.pause();
+                }
+            }
+    });
+} 
+
+let observer = new IntersectionObserver(callback, options);
+observer.observe(document.querySelector('#velkommen-video'));
 
 
 

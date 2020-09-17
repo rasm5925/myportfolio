@@ -52,6 +52,16 @@ video::-webkit-media-controls{
     -webkit-appearance: none;
 }
 
+.elementor-kit-38 button{
+    color: #000557;
+    border-color: #000557;
+    transition: 0.3s;
+}
 
 
+.elementor-kit-38 button:hover{
+    color: white;
+    background-color: #000557;
+    transition: 0.3s;
+}
 
