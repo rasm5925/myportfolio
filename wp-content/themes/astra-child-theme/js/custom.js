@@ -8,6 +8,34 @@ let menulinks = document.getElementsByClassName('menu-link');
 let firstsection = document.getElementById("first-section");
 
 
+
+let options = {
+    root: null,
+    rootMargin: '0px',
+    threshold:1.0
+};
+
+let vid = document.getElementById("velkommen-video");
+vid.autoplay = true;
+vid.loop = true;
+
+let callback = (entries, observer)=>{
+    entries.forEach(entry => {
+        if(entry.target.id == 'velkommen-video')
+            {
+                if(entry.isIntersecting){
+                    entry.target.play();
+                }
+                else{
+                    entry.target.pause();
+                }
+            }
+    });
+}
+
+let observer = new IntersectionObserver(callback, options);
+observer.observe(document.querySelector('#velkommen-video'));
+
 window.onscroll = function() {
   if (window.pageYOffset > 0 ) {
   navbar.classList.add("sticky");
@@ -43,15 +71,24 @@ Array.from(menulinks).forEach(function(item){
   logosort.style.transition= "0.5s";
   }
     
+
+    
     let firstsectionTop = firstsection.getBoundingClientRect("first-section").top
     let navbarBottom = navbar.getBoundingClientRect("first-section").bottom
     
+    
     if(firstsectionTop<=navbarBottom){
         navbar.classList.add("header-background-box-shadow")
+
     } else if(firstsectionTop=>navbarBottom){
         navbar.classList.remove("header-background-box-shadow")
     }
-}
+    
+  
+
+} 
+
+
 
 
 

@@ -47,6 +47,11 @@
 
 
 
+video::-webkit-media-controls{
+    display: none;
+    -webkit-appearance: none;
+}
+
 
 
 
