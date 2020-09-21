@@ -22,7 +22,7 @@
 		<div class="ast-container">
 
 			<div class="ast-flex main-header-container">
-			<img src="<?php echo get_stylesheet_directory_uri() ?>/images/logo-sort.png" alt="logo" id="rc-logo-sort">
+			<a href="https://rasmus-christensen.dk/startside/" class="custom-logo-link" rel="home"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/logo-sort.png" alt="logo" id="rc-logo-sort"></a>
 				<?php astra_masthead_content(); ?>
 			</div><!-- Main Header Container -->
 		</div><!-- ast-row -->
